@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Rapido a la UTP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    <script src="main.js"></script>
+    <script src="reloj.js"></script>
+  </head>
+  <body>
+  <!--TITULO-->  
+
+    <div class="absolute">
+      <h1>Bienvenido a tu pagina de acceso fácil a tus clases aburridas</h1>
+  </div>
+  <!--INICIO SESION RECONTRA BARATA ALV-->
+  <div class="imagen">
+    <img id="foto" src="foto.png" alt="">
+    <h1>Bienvenido de vuelta Martin!</h1>
+    <h4>Future Engineer Software</h4>
+  </div>
+  <!--FIN TITULO-->
+
+  <!--BARRA LATERAL-->
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="menu">
+    <!--SECCION CURSO FISICA-->
+        <div class="item">
+          <a class="sub-btn"><i class="fas"></i>Cálculo Aplicado a la Física<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item" onclick="fisicaZoom()">Zoom</a>
+            <a href="#" class="sub-item" onclick="fisicaModulos()">Módulos</a>
+            <a href="#" class="sub-item" onclick="silabusF()">Sílabus</a>
+          </div>
+        </div>
+      <!--SECCION CURSO COMPRENSION Y REDAACION DE TEXTOS-->
+        <div class="item">
+          <a class="sub-btn"><i class="fas"></i>Comprension y Redacción<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item" onclick="cpsZoom()">Zoom</a>
+            <a href="#" class="sub-item" onclick="compreModulo()">Módulos</a>
+            <a href="#" class="sub-item" onclick="silabusC()">Sílabus</a>
+          </div>
+        </div>
+        <!--SECCION CURSO DIBUJO PAR ING-->
+        <div class="item">
+          <a class="sub-btn"><i class="fas"></i>Dibujo para Ingenieria<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item" onclick="claseDibujo()">Zoom</a>
+            <a href="#" class="sub-item" onclick="modulsDibujo()">Módulos</a>
+            <a href="#" class="sub-item" onclick="silabusDibujo()">Sílabus</a>
+          </div>
+        </div>
+        <!--SECCION CURSO MATE PAR ING-->
+        <div class="item">
+          <a class="sub-btn"><i class="fas"></i>Matematicas para Ingenieros<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item" onclick="claseMath()">Zoom</a>
+            <a href="#" class="sub-item" onclick="modulsMath()">Módulos</a>
+            <a href="#" class="sub-item" onclick="SilabusMath()">Sílabus</a>
+          </div>
+        </div>
+        <!--SECCION CURSO ALOGRITMOS-->
+        <div class="item">
+          <a class="sub-btn"><i class="fas"></i>Principios de Algortimos<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item" onclick="claseAlgoritmo()">Zoom</a>
+            <a href="#" class="sub-item" onclick="modulsAlgoritmo()">Módulos</a>
+            <a href="#" class="sub-item" onclick="silabusAlgoritmo()">Sílabus</a>
+          </div>
+        </div>
+        <!--SECCION CURSO INGLES-->
+        <div class="item">
+          <a class="sub-btn"><i class="fas"></i>Ingles 2<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item" onclick="modulsIngles()">Módulos</a>
+            <a href="#" class="sub-item" onclick="silabusIngles()">Silabus</a>
+          </div>
+        </div>
+        <!--SECCION PORTAL ESTUDIANTE-->
+        <div class="item">
+          <a class="sub-btn"><i class="fas"></i>Portal Estudiante UTP<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item" onclick="portalStudent()">Inicio</a>
+            <a href="#" class="sub-item" onclick="talleres()">Talleres</a>
+          </div>
+        </div>
+        <!--SECCION CANVAS UTP-->
+        <div class="item">
+          <a class="sub-btn" onclick="canvasUTP()"><i class="fas"></i>Canvas UTP</a>
+        </div>
+      </div>
+    </div>
+    <!-- FIN BARRA LATERAL-->
+    <section class="main">
+      <h1>No te<br>Rindas<br> Viejo!</h1>
+    </section>
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      //jquery for toggle sub menus
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+      });
+
+      //jquery for expand and collapse the sidebar
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+    });
+    </script>
+
+    <div class="tiempo">
+      <h1 class="main_time" id="time"></h1>
+      <h2 class="fechaA" id="fecha"></h2>
+      <h3 class="numberWeek" id = "wek"></h3>
+      <h3 class="numberutp" id="utp"></h3>
+    </div>
+  </body>
+</html>

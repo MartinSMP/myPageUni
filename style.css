@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+body{
+  min-height: 100vh;
+  background: url(images/4.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(5px);
+}
+
+
+.imagen img{
+  position: absolute;
+  right: 18.4%;
+  top: 18%;
+  width: 15%;
+}
+
+.imagen h1 {
+  position: absolute;
+  text-align: center;
+  right: 7%;
+  top: 52%;
+  font-size: 180%;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.363);
+  background-size: 2rem;
+  color:#fff;
+}
+.imagen h4{
+  position: absolute;
+  text-align: center;
+  right: 11%;
+  top: 58%;
+  font-size: 110%;
+  letter-spacing: 6px;
+  background: rgba(0, 0, 0, 0.363);
+  background-size: 2rem;
+  color:#fff;
+}
+
+
+.side-bar{
+  background: rgba(255, 255, 255, 0.1);
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+
+.side-bar.active{
+  left: 0;
+}
+
+.side-bar .menu{
+  width: 100%;
+  margin-top: 80px;
+}
+
+.side-bar .menu .item{
+  position: relative;
+  cursor: pointer;
+}
+
+.side-bar .menu .item a{
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  line-height: 60px;
+}
+
+.side-bar .menu .item a:hover{
+  background: #ff147a69;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item i{
+  margin-right: 10px;
+}
+
+.side-bar .menu .item a .dropdown{
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu{
+  background: rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+.side-bar .menu .item .sub-menu a{
+  padding-left: 80px;
+}
+
+.rotate{
+  transform: rotate(90deg);
+}
+
+.close-btn{
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  right: 0;
+  margin: 25px;
+  cursor: pointer;
+}
+
+
+
+.menu-btn{
+  position: absolute;
+  color: #fff;
+  margin: 25px;
+  cursor: pointer;
+}
+
+
+.main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.main h1{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 60px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.tiempo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 7%;
+  color: white;
+  top: 66%;
+}
+
+.absolute{
+  width: 100%;
+  height: 100%;
+  top: 2%;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.absolute h1{
+  color: white;
+  opacity: none;
+  font-size: 24px;
+  letter-spacing: 3px;
+
+}
+
+@media (max-width: 900px){
+  .main h1{
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
