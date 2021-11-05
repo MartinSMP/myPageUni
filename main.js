@@ -5,7 +5,7 @@ function fisicaZoom(){
     window.open("https://canvas.utp.edu.pe/courses/221321/external_tools/1708", '_blank');
 }
 function fisicaModulos(){
-    window.open("https://canvas.utp.edu.pe/courses/221321", "ventanafisica2");
+    window.open("https://canvas.utp.edu.pe/courses/221321", '_blank');
 
 }
 function silabusF(){
