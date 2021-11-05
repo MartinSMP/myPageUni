@@ -2,7 +2,7 @@
 
 //FUNCIONES PARA FISICA ZZZ
 function fisicaZoom(){
-    window.location.href = "https://canvas.utp.edu.pe/courses/221321/external_tools/1708";
+    window.open("https://canvas.utp.edu.pe/courses/221321/external_tools/1708", '_blank');
 }
 function fisicaModulos(){
     window.open("https://canvas.utp.edu.pe/courses/221321", "ventanafisica2");
